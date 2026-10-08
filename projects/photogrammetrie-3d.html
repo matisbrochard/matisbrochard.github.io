@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scanner 3D par photogrammétrie | Matis Brochard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="../index.html" class="nav-mark">MATIS BROCHARD <small>MECA · FETES</small></a>
+    <a href="../index.html#projets" class="nav-back">← Tous les projets</a>
+  </div>
+</nav>
+
+<header class="case-hero">
+  <div class="wrap">
+    <span class="eyebrow" style="color:#7fb8c4;">Projet Innovation · FabLab Marseille</span>
+    <h1>Reconstruction 3D — scanner d'objet par photogrammétrie</h1>
+    <p>Conception, fabrication et automatisation d'un prototype de scanner 3D pour le FabLab de Centrale Méditerranée, de la définition des contraintes jusqu'aux tests de reproductibilité.</p>
+    <div class="case-meta">
+      <div><b>2024 — 2025</b>Année du projet (2e année)</div>
+      <div><b>Équipe de 5</b>A. Bertin, M. Brochard, P. Carles, M. Leclerc, O. Marès</div>
+      <div><b>3DF Zephyr</b>Logiciel de photogrammétrie retenu</div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="case-body">
+
+      <h2>Contexte &amp; objectif</h2>
+      <p>Concevoir un scanner d'objet par photogrammétrie pour le FabLab de l'école : un prototype capable de faciliter la prise de photos sous plusieurs angles pour reconstituer un modèle 3D imprimable, dans la limite des contraintes matérielles et financières d'un projet étudiant.</p>
+
+      <h2>Démarche en trois étapes</h2>
+      <ul>
+        <li><strong>Définition des contraintes</strong> — cadrage projet (matrice RACI, diagramme de Gantt, analyse SWOT) pour identifier les moyens disponibles et les attentes du FabLab</li>
+        <li><strong>Conception</strong> — modélisation 3D du prototype sous Autodesk (plateau tournant motorisé, diamètre 30 cm pour rester compatible avec l'imprimante 3D du FabLab), et sélection du logiciel de photogrammétrie parmi plusieurs solutions open-source (retenu : <strong>3DF Zephyr</strong>)</li>
+        <li><strong>Construction</strong> — fabrication du prototype (support bois, plateau tournant, cadre, support téléphone) et développement d'un script <strong>Python</strong> automatisant la prise de photos, l'ouverture du logiciel et l'import des images</li>
+      </ul>
+
+      <h2>Fonctionnement du programme</h2>
+      <p>Le script pilote la caméra du téléphone via ADB pour capturer les photos à intervalles définis, puis automatise le lancement de 3DF Zephyr et la navigation dans son interface par reconnaissance d'image (détection des boutons à l'écran), jusqu'à l'export du modèle 3D final.</p>
+
+      <div class="result-box">
+        <b>Résultats</b>
+        <p style="margin:8px 0 0;">Prototype fonctionnel validé sur plusieurs objets tests, avec un rapport de proportionnalité mesuré de <span class="mono">1.01</span> entre le modèle 3D et l'objet réel — une fidélité dimensionnelle très satisfaisante pour un prototype de preuve de concept.</p>
+      </div>
+
+      <h2>Limites &amp; pistes d'amélioration</h2>
+      <p>Faute de moteur adapté et de connaissances en électronique disponibles dans les délais, la rotation du bras de levier reste réglée manuellement par crans plutôt que motorisée. Les pistes identifiées portent sur la motorisation complète du bras (poulie et câble), l'intégration au code Python existant, la suppression automatique du socle sur les modèles exportés, et des essais d'impression 3D des objets scannés pour validation finale.</p>
+
+      <h2>Compétences mobilisées</h2>
+      <div class="chip-row">
+        <span class="chip">Photogrammétrie 3D</span><span class="chip">Conception mécanique (Autodesk)</span><span class="chip">Python (automatisation, ADB)</span><span class="chip">Gestion de projet (RACI, Gantt, SWOT)</span><span class="chip">Travail d'équipe (5 pers.)</span>
+      </div>
+    </div>
+
+    <div class="case-nav">
+      <a href="aerodynamique-naca.html">← Projet précédent : Aérodynamique NACA</a>
+      <a href="autres-travaux.html">Voir aussi : autres travaux techniques →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-bottom">
+      <span>© 2026 Matis Brochard</span>
+      <a href="mailto:matisbrochard@gmail.com">matisbrochard@gmail.com</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

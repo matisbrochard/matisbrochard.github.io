@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aérodynamique de profils NACA | Matis Brochard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="../index.html" class="nav-mark">MATIS BROCHARD <small>MECA · FETES</small></a>
+    <a href="../index.html#projets" class="nav-back">← Tous les projets</a>
+  </div>
+</nav>
+
+<header class="case-hero">
+  <div class="wrap">
+    <span class="eyebrow" style="color:#7fb8c4;">Projet Aérodynamique 3A</span>
+    <h1>Vérification de la linéarité de portance sur profils NACA</h1>
+    <p>Étude numérique par méthode des panneaux de l'évolution de la portance de deux profils NACA (symétrique et cambré) en fonction de l'angle d'incidence.</p>
+    <div class="case-meta">
+      <div><b>2025 — 2026</b>Année du projet</div>
+      <div><b>Équipe de 3</b>L. Pernin, A. Modrin, M. Brochard</div>
+      <div><b>Méthode des panneaux</b>Outil de Polytechnique Montréal</div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="case-body">
+
+      <h2>Objectif</h2>
+      <p>Vérifier la linéarité de la portance en fonction de l'angle d'incidence α, en étudiant deux profils NACA entre -3° et 10° : le profil symétrique <strong>NACA 0018</strong> et le profil cambré <strong>NACA 4412</strong>.</p>
+
+      <div class="fig-pair">
+        <figure class="figure">
+          <img src="../assets/img/naca-0018.jpg" alt="Géométrie du profil symétrique NACA 0018">
+          <figcaption>NACA 0018 : profil symétrique.</figcaption>
+        </figure>
+        <figure class="figure">
+          <img src="../assets/img/naca-4412.jpg" alt="Géométrie du profil cambré NACA 4412">
+          <figcaption>NACA 4412 : profil cambré.</figcaption>
+        </figure>
+      </div>
+
+      <h2>Démarche</h2>
+      <ul>
+        <li>Détermination du nombre optimal de panneaux pour l'algorithme de calcul de la portance</li>
+        <li>Analyse des coefficients de pression (C<sub>p</sub>) sur l'extrados et l'intrados pour α = -3°, 0° et 3°</li>
+        <li>Tracé de l'évolution du coefficient de portance C<sub>L</sub> en fonction de α, et comparaison à la théorie du profil mince (C<sub>L</sub> = A(α − α<sub>L=0</sub>), avec A ≈ 2π en théorie)</li>
+      </ul>
+
+      <p>Pour le profil cambré NACA 4412, l'analyse des pressions confirme une portance positive même à incidence nulle : la zone de surpression sur l'extrados se réduit progressivement avec α, tandis que la dépression se renforce, jusqu'à disparaître complètement à α = 3°.</p>
+
+      <div class="result-box">
+        <b>Résultats numériques</b>
+        <p style="margin:8px 0 0;">NACA 0018 : <span class="mono">A = 5,97</span>, α<sub>L=0</sub> = <span class="mono">-0,0007</span><br>
+        NACA 4412 : <span class="mono">A = 5,64</span>, α<sub>L=0</sub> = <span class="mono">-0,13</span><br>
+        Théorie du profil mince : <span class="mono">A ≈ 2π ≈ 6,283</span></p>
+      </div>
+
+      <p>Les deux profils confirment une évolution quasi linéaire du coefficient de portance avec l'angle d'incidence, avec des valeurs de pente proches de la prédiction théorique. Le léger écart observé pour le NACA 4412 provient de son asymétrie, qui génère une portance positive dès α = 0°, d'où une valeur négative d'α<sub>L=0</sub>. Ces résultats valident la méthode des panneaux pour reproduire fidèlement la physique de la portance à incidences modérées.</p>
+
+      <h2>Compétences mobilisées</h2>
+      <div class="chip-row">
+        <span class="chip">Méthode des panneaux</span><span class="chip">Aérodynamique potentielle</span><span class="chip">Analyse de données</span><span class="chip">Travail d'équipe (3 pers.)</span>
+      </div>
+    </div>
+
+    <div class="case-nav">
+      <a href="silencieux-fetes.html">← Projet précédent : Silencieux acoustique</a>
+      <a href="photogrammetrie-3d.html">Projet suivant : Scanner 3D →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-bottom">
+      <span>© 2026 Matis Brochard</span>
+      <a href="mailto:matisbrochard@gmail.com">matisbrochard@gmail.com</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

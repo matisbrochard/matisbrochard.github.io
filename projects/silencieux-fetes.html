@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Silencieux acoustique à métamatériaux de Fano | Matis Brochard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="../index.html" class="nav-mark">MATIS BROCHARD <small>MECA · FETES</small></a>
+    <a href="../index.html#projets" class="nav-back">← Tous les projets</a>
+  </div>
+</nav>
+
+<header class="case-hero">
+  <div class="wrap">
+    <span class="eyebrow" style="color:#7fb8c4;">Rapport de projet MECA 3A · Filière FETES</span>
+    <h1>Conception de silencieux rectangulaires pour la dépollution en particules fines</h1>
+    <p>Étude numérique et expérimentale d'un silencieux acoustique innovant basé sur des métamatériaux à interférence de Fano, conciliant atténuation sonore basse fréquence et agglomération des particules fines.</p>
+    <div class="case-meta">
+      <div><b>2025 — 2026</b>Année du projet</div>
+      <div><b>Équipe de 3</b>L. Pernin, A. Modrin, M. Brochard</div>
+      <div><b>C. Maury, T. Bravo</b>Encadrants (ECM-LMA, CSIC)</div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="case-body wide">
+
+      <h2>Contexte &amp; objectif</h2>
+      <p>Concilier deux exigences industrielles et environnementales majeures : l'atténuation des nuisances sonores basses fréquences et l'agglomération des particules fines, tout en garantissant une libre circulation de l'air — sans matériau absorbant classique — et un encombrement minimal (15 cm de long).</p>
+
+      <figure class="figure">
+        <img src="../assets/img/silencieux-concept.png" alt="Schéma de principe : ondes en phase, trajet dans les zones 1 et 2 du silencieux, ondes en opposition de phase en sortie">
+        <figcaption>Principe du silencieux : l'onde qui traverse la zone 2 est déphasée par rapport à celle de la zone 1, ce qui provoque des interférences destructives en sortie.</figcaption>
+      </figure>
+
+      <div class="split">
+        <div>
+          <h2>Démarche</h2>
+          <ul>
+            <li><strong>Modélisation analytique</strong> par la méthode des matrices de transfert (MMT), du module unitaire jusqu'au système en série</li>
+            <li><strong>Optimisation géométrique</strong> par algorithme d'essaim particulaire (PSO) sous MATLAB, pour cibler une large bande d'atténuation en tenant compte d'un écoulement moyen à Mach 0,1</li>
+            <li><strong>Validation physique</strong> par modélisation CAO sur Inventor puis simulation multiphysique 3D par éléments finis sur COMSOL Multiphysics (couplage écoulement / acoustique)</li>
+          </ul>
+
+      <div class="result-box">
+        <b>Résultats</b>
+        <p style="margin:8px 0 0;">Bande d'atténuation théorique ciblée : <span class="mono">310 – 590 Hz</span>. La simulation multiphysique confirme le piégeage de l'onde sonore dans les cavités résonantes, notamment à <span class="mono">400 Hz</span> et <span class="mono">580 Hz</span>, validant le principe de fonctionnement du silencieux.</p>
+      </div>
+
+      <p>L'étude a également mis en évidence les limites de l'approche : la forte sélectivité des résonateurs et la contrainte de compacité stricte empêchent la fusion parfaite des pics d'atténuation en un filtre coupe-bande continu et uniforme.</p>
+        </div>
+        <div class="split-stack">
+          <figure class="figure">
+            <img src="../assets/img/silencieux-cao.png" alt="Modèle CAO du silencieux sous Autodesk Inventor">
+            <figcaption>Modèle CAO du silencieux (Autodesk Inventor).</figcaption>
+          </figure>
+          <figure class="figure">
+            <img src="../assets/img/silencieux-comsol.png" alt="Géométrie du silencieux dans COMSOL Multiphysics">
+            <figcaption>Géométrie du modèle sous COMSOL Multiphysics.</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <h2>Perspectives</h2>
+      <ul>
+        <li>Optimisation géométrique avancée (cavités non uniformes, largeur de fentes variable) pour élargir la bande d'atténuation</li>
+        <li>Validation expérimentale par prototype (impression 3D ou usinage) et mesures en tube d'impédance</li>
+        <li>Simulation diphasique pour quantifier le taux réel d'agglomération des particules fines</li>
+      </ul>
+
+      <h2>Compétences mobilisées</h2>
+      <div class="tool-logos">
+        <img src="../assets/logos/matlab.png" alt="MATLAB" class="tl-wide">
+        <img src="../assets/logos/inventor.png" alt="Autodesk Inventor" class="tl-wide">
+        <img src="../assets/logos/comsol.png" alt="COMSOL Multiphysics" class="tl-wide">
+      </div>
+      <div class="chip-row">
+        <span class="chip">MATLAB — optimisation PSO</span><span class="chip">COMSOL Multiphysics</span><span class="chip">Autodesk Inventor</span><span class="chip">Acoustique des métamatériaux</span><span class="chip">Travail d'équipe (3 pers.)</span>
+      </div>
+    </div>
+
+    <div class="case-nav">
+      <a href="queensland-supraconducteurs.html">← Projet précédent : Supraconducteurs YBCO</a>
+      <a href="aerodynamique-naca.html">Projet suivant : Aérodynamique NACA →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-bottom">
+      <span>© 2026 Matis Brochard</span>
+      <a href="mailto:matisbrochard@gmail.com">matisbrochard@gmail.com</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
