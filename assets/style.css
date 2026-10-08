@@ -462,3 +462,27 @@ blockquote {
 }
 .skills-line + .tool-logos { margin-left: 98px; }
 @media (max-width: 760px) { .skills-line + .tool-logos { margin-left: 0; } }
+
+/* Hero: each text block sits on its own panel matching the hero background,
+   so flow lines pass behind the text and stay visible in the gaps between blocks */
+.hero-grid > div:first-child { position: relative; z-index: 1; }
+.hero-grid > div:first-child > * {
+  position: relative;
+  width: fit-content;
+  max-width: 100%;
+  background: var(--paper-50);
+  box-shadow: 0 0 8px 6px var(--paper-50);
+}
+.hero-grid > div:first-child > .eyebrow { display: block; margin-bottom: 18px; }
+.hero-grid > div:last-child { position: relative; z-index: 1; }
+@media (max-width: 880px) {
+  .hero-grid { row-gap: 56px; }
+  .hero-grid > div:first-child > .eyebrow { margin-bottom: 40px; }
+  .hero-grid > div:first-child > h1 { margin-bottom: 44px; }
+  .hero-grid > div:first-child > p { margin-bottom: 0; }
+  .hero-grid > div:first-child > div[style*="flex"] { margin-top: 52px !important; }
+  .hero-grid > div:first-child > .stat-groups { margin-top: 56px !important; }
+  .stat-groups { row-gap: 48px; }
+}
+
+.flow-line { vector-effect: non-scaling-stroke; }
