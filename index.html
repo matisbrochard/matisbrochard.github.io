@@ -26,7 +26,7 @@
 <!-- ================= HERO ================= -->
 <header style="position:relative; overflow:hidden; padding:76px 0 64px; background:var(--paper-50);">
   <div class="flow-field" aria-hidden="true">
-    <svg viewBox="0 0 1200 640" preserveAspectRatio="xMidYMid slice">
+    <svg id="flow-svg" viewBox="0 0 1200 640" preserveAspectRatio="xMidYMid slice">
       <path class="flow-line" style="animation-delay:.0s" d="M -50 120 C 250 120, 300 60, 560 90 S 900 190, 1250 130"/>
       <path class="flow-line" style="animation-delay:.15s" d="M -50 190 C 250 190, 310 140, 560 165 S 900 245, 1250 195"/>
       <path class="flow-line" style="animation-delay:.3s" d="M -50 260 C 260 260, 320 235, 560 240 S 890 280, 1250 255"/>
@@ -67,6 +67,15 @@
     </div>
   </div>
 </header>
+<script>
+  /* On narrow screens, stretch the flow lines over the whole (tall) hero so they stay visible between text blocks */
+  (function(){ try {
+    var svg=document.getElementById('flow-svg'); if(!svg||!window.matchMedia) return;
+    var mq=window.matchMedia('(max-width: 880px)');
+    function apply(){ svg.setAttribute('preserveAspectRatio', mq.matches ? 'none' : 'xMidYMid slice'); }
+    apply(); if(mq.addEventListener) mq.addEventListener('change',apply);
+  } catch(e){} })();
+</script>
 
 <section class="logo-band" aria-label="Établissements">
   <div class="wrap">
